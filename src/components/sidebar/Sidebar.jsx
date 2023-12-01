@@ -12,7 +12,7 @@ function Sidebar() {
   return (
     <>
       <div className=" p-0 m-0  ">
-        <div style={{ width: isOpen ? "332px" : "88px" }} className="sidebar">
+        <div style={{ width: isOpen ? "332px" : "93px" }} className="sidebar">
           <img
             className="logo-singl"
             src="/Path2616.png"
@@ -31,7 +31,7 @@ function Sidebar() {
               alt="arrow icon"
               className="rounded-circle bars"
               style={{
-                marginLeft: isOpen ? "317px" : "73px",
+                marginLeft: isOpen ? "317px" : "77px",
                 transform: isOpen ? "  rotate(0deg)" : " rotate(-180deg)",
               }}
               onClick={toggle}
@@ -122,7 +122,7 @@ function Sidebar() {
               style={{ left: isOpen ? "270.42px" : "35.4px" }}
             />
           </div>
-          <div>
+          <div className="dashboard-Main-link">
             <ul
               className="p-0  mb-0"
               style={{
@@ -130,13 +130,12 @@ function Sidebar() {
                 transition: ".5s ease-in",
               }}
             >
-              <li className="link" style={{background: "#ECEDF3"}}>
+              <li className="link" style={{ background: "#ECEDF3" }}>
                 <div className="icon">
                   <img
+                    className="dashboard-icone-img"
                     src="/icon/dashbord.png"
                     alt="dashboard icon"
-                    width="17"
-                    height="17"
                   />
                 </div>
                 <div className="link_text">Dashboard</div>
@@ -145,74 +144,54 @@ function Sidebar() {
               <li className="link">
                 <div className="icon">
                   <img
+                    className="dashboard-icone-img"
                     src="/icon/chat.png"
                     alt="dashboard icon"
-                    width="19"
-                    height="19"
                   />
                 </div>
-
                 <div className="link_text">Chat</div>
               </li>
 
               <li className="link">
                 <div className="icon">
                   <img
+                    className="dashboard-icone-img"
                     src="/icon/service.png"
                     alt="dashboard icon"
-                    width="19"
-                    height="19"
                   />
                 </div>
-
                 <div className="link_text">Services</div>
               </li>
 
               <li className="link">
                 <div className="icon">
                   <img
+                    className="dashboard-icone-img"
                     src="/icon/add.png"
                     alt="dashboard icon"
-                    width="19"
-                    height="19"
                   />
                 </div>
-
                 <div className="link_text">Add</div>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-export default Sidebar;
-
-{
-  /* <hr
-            className=""
+          <hr
             style={{
-              margin: "22px auto 0",
-              width: isOpen ? "90%" : "75%",
+              margin: "6px 17px 0",
+              width: isOpen ? "90%" : "65%",
+              transition: ".5s ease-in",
             }}
-          /> */
-}
-{
-  /* <div>
+          />
+
+          <div>
             <span
-              // style={{ display: isOpen ? "block" : "none", marginLeft: "32px" }}
               style={{
-                visibility: isOpen ? "visible" : "hidden",
-                transition: isOpen ? ".7s ease-in" : ".7s ease-in",
-                // display: isOpen ? "block" : "none",
-                // visibility: isOpen ? "1" : "0",
+                display: isOpen ? "block" : "none",
+                transition: ".5s ease-in",
                 marginLeft: "32px",
-                marginTop: "17px",
+                marginTop: "10px",
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
-                // transition: isOpen ?".8s ease-in" : ".8s ease-in",
               }}
               onClick={() => setIsCollapsed(!isCollapsed)}
             >
@@ -222,174 +201,70 @@ export default Sidebar;
               className="collapse-content"
               style={{
                 display: isCollapsed && isOpen ? "none" : "block",
-                // marginTop: "6px",
-                // transition: isOpen ? " .6s ease-in" : ".8s ease-in",
-                marginTop: isOpen ? "6px" : "-33px",
-                transition: isOpen ? " ease-in .6s" : ".8s ease-in",
+                marginTop: "6px",
+                transition: ".5s ease-in",
               }}
               aria-expanded={isCollapsed}
             >
-              <ul
-                className="p-0  dropdown1trans"
+           <div className="dashboard-Main-link">
+           <ul
+                className="p-0 mb-0"
                 style={{
-                  overflow:"hidden",
-                  marginLeft: "18.25px",
-                  top: isOpen ? "443px " : "385px",
-                  transition: isOpen ? ".8s ease-in" : ".8s ease-in",
-                  // transition: isOpen ? "all .7s" : ".5s"
+                  overflow: "hidden",
+                  transition: ".5s ease-in",
                 }}
               >
-                <li
-                  className="list-unstyled link-collaps"
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: "18px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <img
-                    src="/icon/alert.png"
-                    alt="dashboard icon"
-                    width="16"
-                    height="20"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "26px" : "21px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        overflow: "hidden",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                        // marginTop: isOpen ? "26px" : "21px"
-                      }}
-                    >
-                      Notification
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="dashboard-icone-img"
+                      src="/icon/alert.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Notification</div>
                 </li>
-                <li
-                  className="list-unstyled d-flex  link-collaps"
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: "8px",
-                    paddingTop: "px",
-                    paddingBottom: "5px",
-                    // overflow:"hidden",
-                    
-                  }}
-                >
-                  <img
-                    src="/icon/shudailMeeting.png"
-                    alt="dashboard icon"
-                    width="17"
-                    height="17"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "21px" : "21px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        overflow: "hidden",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                        // marginTop: isOpen ? "21px" : "21px",
-                      }}
-                    >
-                      Schedule a 30 min meeting
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="dashboard-icone-img"
+                      src="/icon/shudailMeeting.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Schedule a 30 min meeting</div>
                 </li>
-                <li
-                  className="list-unstyled  link-collaps"
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <img
-                    src="/icon/setting.png"
-                    alt="dashboard icon"
-                    width="19"
-                    height="19"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "21px" : "21px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        overflow: "hidden",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                        marginTop: isOpen ? "21px" : "21px",
-                      }}
-                    >
-                      Setting
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="dashboard-icone-img"
+                      src="/icon/setting.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Setting</div>
                 </li>
               </ul>
+           </div>
             </div>
-          </div> */
-}
-
-{
-  /* <hr
+          </div>
+          <hr
             style={{
-              margin: "22px auto 0",
-              width: isOpen ? "90%" : "75%",
+              margin: "6px 17px 0",
+              width: isOpen ? "90%" : "65%",
+              transition: ".5s ease-in",
             }}
-          /> */
-}
-{
-  /* 
-          <div>
+          />
+
+<div>
             <span
-              // style={{ display: isOpen ? "block" : "none", marginLeft: "32px" }}
               style={{
-                visibility: isOpen ? "visible" : "hidden",
-                transition: isOpen ? ".7s ease-in" : ".7s ease-in",
-                // display: isOpen ? "block" : "none",
-                // visibility: isOpen ? "1" : "0",
+                display: isOpen ? "block" : "none",
+                transition: ".5s ease-in",
                 marginLeft: "32px",
-                marginTop: "26px",
+                marginTop: "10px",
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
-                // transition: isOpen ?".8s ease-in" : ".8s ease-in",
               }}
               onClick={() => setIsCollapsed1(!isCollapsed1)}
             >
@@ -399,143 +274,57 @@ export default Sidebar;
               className="collapse-content"
               style={{
                 display: isCollapsed1 && isOpen ? "none" : "block",
-                // marginTop: "6px",
-                // transition: isOpen ? " .6s ease-in" : ".8s ease-in",
-                marginTop: isOpen ? "6px" : "-33px",
-                transition: isOpen ? " ease-in .6s" : ".8s ease-in",
+                marginTop: "6px",
+                transition: ".5s ease-in",
               }}
               aria-expanded={isCollapsed1}
             >
-              <ul
-                className="p-0 "
+           <div className="dashboard-Main-link">
+           <ul
+                className="p-0 mb-0"
                 style={{
-                  marginLeft: "18.25px",
-                  top: isOpen ? "443px" : "385px",
+                  overflow: "hidden",
+                  transition: ".5s ease-in",
                 }}
               >
-                <li
-                  className="list-unstyled  link-collaps"
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: isOpen ? "18px" : "10px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <img
-                    src="/icon/finance.png"
-                    alt="dashboard icon"
-                    width="21"
-                    height="15"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "21px" : "28px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        // display: isOpen ? "block " : "none",
-                        transition: isOpen ? ".8s ease-in" : ".8s ease-in",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                        marginTop: isOpen ? "21px" : "21px",
-                      }}
-                    >
-                      Finances
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="/icon/finance.png"
+                      src="/icon/alert.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Finances</div>
                 </li>
-                <li
-                  className="list-unstyled  link-collaps "
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <img
-                    src="/icon/mail.png"
-                    alt="dashboard icon"
-                    width="19"
-                    height="15"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "26px" : "23px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        marginTop: isOpen ? "26px" : "21px",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                      }}
-                    >
-                      Mails
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="/icon/mail.png"
+                      src="/icon/shudailMeeting.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Mails</div>
                 </li>
-                <li
-                  className="list-unstyled  link-collaps"
-                  style={{
-                    paddingLeft: "16px",
-                    marginRight: "16.5px",
-                    borderRadius: "4px",
-                    marginTop: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <img
-                    src="/icon/meeting.png"
-                    alt="dashboard icon"
-                    width="19"
-                    height="15"
-                    className="icon"
-                    // style={{ marginTop: isOpen ? "26px" : "21px" }}
-                  />
-                  <CSSTransition
-                    in={isOpen}
-                    timeout={800}
-                    classNames={"fade"}
-                    unmountOnExit
-                  >
-                    <a
-                      className="text-decoration-none link_text"
-                      href="#"
-                      style={{
-                        marginTop: isOpen ? "26px" : "21px",
-                        fontFamily: "Axiforma , sans-serif",
-                        fontWeight: "400",
-                      }}
-                    >
-                      Meetings
-                    </a>
-                  </CSSTransition>
+                <li className="link link-collaps">
+                  <div className="icon">
+                    <img
+                      className="/icon/meeting.png"
+                      src="/icon/setting.png"
+                      alt="dashboard icon"
+                    />
+                  </div>
+                  <div className="link_text">Meetings</div>
                 </li>
               </ul>
+           </div>
             </div>
-          </div> */
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
+
+export default Sidebar;

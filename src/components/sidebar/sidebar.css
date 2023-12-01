@@ -95,13 +95,15 @@
     height: 18.2px;
   }
 
+  .dashboard-Main-link{
+    margin-left: 24px;
+  }
   .link {
     display: flex;
     color: #55619c;
     transition: .5s ease-in;
     padding: 5.5px 14.5px;
-    margin-left: 24px;
-    margin-right: 16.5px;
+    margin-right: 16px;
     border-radius: 4px;
   }
   
@@ -125,6 +127,10 @@
   .icon {
     font-size: 20px !important;
     color: #050504;
+  }
+  .dashboard-icone-img{
+    width: 19px;
+    height: 19px;
   }
   
   .link_text {
