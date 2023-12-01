@@ -207,7 +207,7 @@ function Sidebar() {
           </div>
           <hr
             style={{
-              margin: "6px 17px 0",
+              margin: "6px 17px 8px",
               width: isOpen ? "90%" : "65%",
               transition: ".5s ease-in",
             }}
@@ -216,7 +216,8 @@ function Sidebar() {
           <div>
             <span
               style={{
-                display: isOpen ? "block" : "none",
+                // display: isOpen ? "block" : "none",
+                visibility: isOpen ? "visible " : "hidden",  // for smoth behav if we use display block and none then smothnes not working
                 transition: ".5s ease-in",
                 marginLeft: "32px",
                 marginTop: "10px",
@@ -231,7 +232,7 @@ function Sidebar() {
               className="collapse-content"
               style={{
                 display: isCollapsed && isOpen ? "none" : "block",
-                marginTop: "6px",
+                marginTop: isOpen ?  "6px" : "-20px",
                 transition: ".5s ease-in",
               }}
             
