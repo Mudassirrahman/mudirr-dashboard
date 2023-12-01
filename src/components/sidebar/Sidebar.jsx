@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./sidebar.css";
 
@@ -7,7 +6,38 @@ function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
   const [isCollapsed, setIsCollapsed] = useState();
-  const [isCollapsed1, setIsCollapsed1] = useState();
+  const [isCollapsed1, setIsCollapsed1] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(true);
+  const menuRef = useRef(null);
+
+  const handleDropdownToggle = () => {
+    setIsOpen1((prevState) => !prevState);
+  };
+
+ 
+  useEffect(() => {
+    if (!isOpen) {
+      handleDropdownToggle();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsOpen1(true); // Set isOpen1 to true when sidebar is closed
+    }
+  }, [isOpen]);
+
+   useEffect(() => {
+    if (menuRef.current) {
+      const children = menuRef.current.children;
+      let totalHeight = 0;
+      for (let i = 0; i < children.length; i++) {
+        totalHeight += children[i].clientHeight;
+      }
+      menuRef.current.style.height = isOpen1 ? `${totalHeight}px` : "0";
+    }
+  }, [isOpen1]);
+
 
   return (
     <>
@@ -46,7 +76,7 @@ function Sidebar() {
             }}
           >
             <a
-              href="#"
+              href="/"
               className="d-flex  link-dark text-decoration-none "
               id="dropdownUser2"
               data-bs-toggle="dropdown"
@@ -76,17 +106,17 @@ function Sidebar() {
               aria-labelledby="dropdownUser2"
             >
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   New project...
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Settings
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Profile
                 </a>
               </li>
@@ -94,7 +124,7 @@ function Sidebar() {
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Sign out
                 </a>
               </li>
@@ -193,7 +223,7 @@ function Sidebar() {
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
               }}
-              onClick={() => setIsCollapsed(!isCollapsed)}
+              onClick={handleDropdownToggle}
             >
               Account
             </span>
@@ -204,48 +234,49 @@ function Sidebar() {
                 marginTop: "6px",
                 transition: ".5s ease-in",
               }}
-              aria-expanded={isCollapsed}
+            
             >
-           <div className="dashboard-Main-link">
-           <ul
-                className="p-0 mb-0"
-                style={{
-                  overflow: "hidden",
-                  transition: ".5s ease-in",
-                }}
-              >
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="dashboard-icone-img"
-                      src="/icon/alert.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Notification</div>
-                </li>
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="dashboard-icone-img"
-                      src="/icon/shudailMeeting.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Schedule a 30 min meeting</div>
-                </li>
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="dashboard-icone-img"
-                      src="/icon/setting.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Setting</div>
-                </li>
-              </ul>
-           </div>
+              <div className="dashboard-Main-link" >
+                <ul
+                  className="p-0 mb-0"
+                  style={{
+                    overflow: "hidden",
+                    transition: ".5s ease-in",
+                  }}
+                  ref={menuRef}
+                >
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="dashboard-icone-img"
+                        src="/icon/alert.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Notification</div>
+                  </li>
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="dashboard-icone-img"
+                        src="/icon/shudailMeeting.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Schedule a 30 min meeting</div>
+                  </li>
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="dashboard-icone-img"
+                        src="/icon/setting.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Setting</div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <hr
@@ -256,7 +287,7 @@ function Sidebar() {
             }}
           />
 
-<div>
+          <div>
             <span
               style={{
                 display: isOpen ? "block" : "none",
@@ -279,46 +310,46 @@ function Sidebar() {
               }}
               aria-expanded={isCollapsed1}
             >
-           <div className="dashboard-Main-link">
-           <ul
-                className="p-0 mb-0"
-                style={{
-                  overflow: "hidden",
-                  transition: ".5s ease-in",
-                }}
-              >
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="/icon/finance.png"
-                      src="/icon/alert.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Finances</div>
-                </li>
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="/icon/mail.png"
-                      src="/icon/shudailMeeting.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Mails</div>
-                </li>
-                <li className="link link-collaps">
-                  <div className="icon">
-                    <img
-                      className="/icon/meeting.png"
-                      src="/icon/setting.png"
-                      alt="dashboard icon"
-                    />
-                  </div>
-                  <div className="link_text">Meetings</div>
-                </li>
-              </ul>
-           </div>
+              <div className="dashboard-Main-link">
+                <ul
+                  className="p-0 mb-0"
+                  style={{
+                    overflow: "hidden",
+                    transition: ".5s ease-in",
+                  }}
+                >
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="/icon/"
+                        src="/icon/finance.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Finances</div>
+                  </li>
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="icon"
+                        src="/icon/mail.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Mails</div>
+                  </li>
+                  <li className="link link-collaps">
+                    <div className="icon">
+                      <img
+                        className="/icon"
+                        src="/icon/meeting.png"
+                        alt="dashboard icon"
+                      />
+                    </div>
+                    <div className="link_text">Meetings</div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
