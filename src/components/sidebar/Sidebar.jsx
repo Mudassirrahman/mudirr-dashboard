@@ -223,6 +223,7 @@ function Sidebar() {
                 marginTop: "10px",
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
+                cursor: "pointer"
               }}
               onClick={handleDropdownToggle}
             >

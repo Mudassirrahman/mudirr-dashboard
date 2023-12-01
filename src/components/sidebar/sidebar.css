@@ -127,6 +127,7 @@
   .icon {
     font-size: 20px !important;
     color: #050504;
+    cursor: pointer;
   }
   .dashboard-icone-img{
     width: 19px;
