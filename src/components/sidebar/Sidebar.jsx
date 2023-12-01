@@ -86,7 +86,7 @@ function Sidebar() {
                 style={{
                   marginTop: "10px",
                 }}
-                src="/DP.png"
+                src="/DP.jpg"
                 alt="dm img"
                 width="40"
                 height="40"
