@@ -54,6 +54,8 @@
     overflow: hidden;
     transition: .5s ease-in;
     margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 500;
   }
 
   .acc-holder-name{
@@ -61,7 +63,6 @@
     margin-left: 3.2rem;
     margin-top: -14px;
     overflow: hidden;
-    width: 88px;
     word-wrap: break-word;
     font-family: Axiforma , sans-serif;
     font-style: normal;

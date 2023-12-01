@@ -97,7 +97,7 @@ function Sidebar() {
                 className="dropdown-toggle acc-dropdown"
                 style={{ visibility: isOpen ? "visible " : "hidden" }}
               >
-                Customer@email.com
+                Mudassirrehman1989@email.com
               </strong>
             </a>
 
@@ -134,7 +134,7 @@ function Sidebar() {
               className="acc-holder-name"
               style={{ visibility: isOpen ? "visible " : "hidden" }}
             >
-              Jane Doe
+              Mudassir Rehman
             </p>
           </div>
           <div className="search-section">
