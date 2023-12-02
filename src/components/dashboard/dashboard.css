@@ -1,0 +1,196 @@
+
+
+.heading {
+    /* width: 316px; */
+    height: 44px !important;
+  
+    /* Body 16 - Semi */
+  
+    /* font-family: "Axiforma , sans-serif" !important; */
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 140% !important;
+    /* or 22px */
+  
+    /* Neutrals/Grey 1 */
+  
+    color: #050504 !important;
+  }
+  
+  .timeline {
+    border-radius: 25px;
+    margin-top: 6px;
+    position: relative;
+    background-color: #dadad7;
+    height: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+  }
+
+
+.main {
+    width: -webkit-fill-available;
+    -moz-transition: left .8s ease-in;
+    -o-transition: left .8s ease-in;
+    -webkit-transition: left .8s ease-in;
+    transition: left .8s ease-in;
+  }
+  
+  .timelineLink {
+    width: 93px;
+    font-family: "Axiforma , sans-serif" !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #707066;
+    text-align: center;
+    align-items: center;
+    margin-top: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+  }
+  
+  .timelineLink:hover {
+    color: #55619c;
+    border-bottom: 2px solid #55619c;
+    border-radius: 0% !important;
+    /* padding-bottom: 10px; */
+    background: #d3d3c7;
+  }
+  
+  .timelineLink2 {
+    /* width: 122px;
+    height: 24px; */
+    font-family: "Axiforma , sans-serif";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 148%;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #55619c;
+    padding-top: 4px;
+    text-align: center;
+  }
+  
+  .timelineLink2:hover {
+    background:  #ECEDF3;;
+    
+  }
+  
+  .serch-icon {
+    transition: all 1.5s ease-in !important;
+    transition: all 1.5s !important;
+    -moz-transition: margin-left 1.5s ease-in !important;
+    -o-transition: margin-left 1.5s ease-in !important;
+    -webkit-transition: margin-left 1.5s ease-in !important;
+    transition: margin-left 1.5s ease-in !important;
+  }
+  
+  .dropdown1trans{
+    transition: top 1.5s ease-in !important;
+  }
+  
+  span {
+    width: 228px;
+    height: 20px;
+    font-family: "Axiforma , sans-serif !important";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #707066;
+    margin-left: 16px;
+    cursor: pointer;
+    display: block;
+  }
+  
+  span::after {
+    float: right;
+    right: 10%;
+    content: "˅";
+    font-size: 14px;
+  }
+  
+  .timeline__progress {
+    /* min-width: 15px; */
+    z-index: 1;
+    border-radius: 500px;
+    position: absolute;
+    background-color: #55619c;
+    height: 2px;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.2s ease;
+  }
+  
+  .timeline__ball {
+    z-index: 2;
+    /* background-color: #55619c; */
+    height: 12px;
+    width: 12px;
+    border: 6px solid #dadad7;
+    background-color: white;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .active {
+    border-color: #55619c;
+  }
+  
+  .projectCardButton:hover{
+    background: #384068 !important;
+  }
+  
+  /* FADE ANIMATIONS */
+  .fade-enter {
+    opacity: 0 !important;
+  }
+  
+  .fade-enter-active {
+    opacity: 1 !important;
+    transition: 3s linear !important;
+  }
+  
+  .fade-exit {
+    opacity: 1 !important;
+  }
+  
+  .fade-exit-active {
+    opacity: 0 !important;
+    transition: 1.5s linear !important;
+  }
+
+
+/* Tabs acvive */
+.react-tabs__tab{
+    border: none !important;
+  }
+  .react-tabs__tab--selected{
+    color: #55619c !important;
+    /* background-color: #ECEDF3 !important; */
+    border-bottom: 3px solid #55619c !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0% !important;
+    /* padding-bottom: 4px!important; */
+  }
+  .react-tabs__tab-list{
+    /* background: #DADAD7 !important; */
+  border-radius: 4px !important;
+  border-bottom: 2px solid #dadad7 !important;
+  }
+  
+  
