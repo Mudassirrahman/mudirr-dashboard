@@ -49,7 +49,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                 borderRadius: "0px",
                 height: "268px",
                 width: isOpen ? "300px " : "380px",
-                transition: isOpen ? ".8s ease-in" : ".8s ease-in",
+                transition: ".5s ease-in",
                 border: "0.5px solid #DADAD7",
                 boxShadow: "0px 0px 4px rgba(164, 164, 164, 0.28)",
               }}
@@ -61,7 +61,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                     className="heading"
                     style={{
                       width: isOpen ? "236px" : "316px",
-                      transition: isOpen ? ".8s ease-in" : ".8s ease-in",
+                      transition: ".5s ease-in",
                       fontFamily: "Axiforma , sans-serif",
                     }}
                     key={item.id}
@@ -92,7 +92,6 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                   ))}
                 </div>
                 <div className="" style={{ marginTop: "27px" }}>
-                  {/* {item.timeline} */}
                   <TimeLine />
                 </div>
                 <div className="" style={{ marginTop: "17px" }}>
@@ -122,8 +121,6 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                       marginTop: "7px",
                       width: "149px",
                       borderRadius: "4px",
-                      // height: "16px",
-
                       fontFamily: "Axiforma , sans-serif",
                       fontStyle: "normal",
                       fontWeight: "400",

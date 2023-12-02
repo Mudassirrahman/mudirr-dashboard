@@ -15,16 +15,7 @@ function ProjectHistoryTabs ({isOpen, setIsOpen, toggle}) {
       
         <Tab className=" list-unstyled timelineLink2"
           style={{
-            float:"right",
-            width:"122px",
-            fontStyle: "normal",
-            fontWeight: " 500",
-            fontSize: "16px",
-            lineHeight: "148%",
-            textDecoration: "underline",
-            color: "#55619C",
             marginLeft: isOpen ? "460px" : "700px",
-            transition: isOpen ? ".8s ease-in": ".8s ease-in",
           }}
         >
           See all projects

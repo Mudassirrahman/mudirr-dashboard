@@ -1,20 +1,56 @@
+.dashboardWelcomeHeading{
+  width: 632px;
+  height: 38px;
+  margin-top: 56px;
+  margin-left: 25px;
+  font-family: Axiforma , sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 135%;
+  color: #050504;
+}
 
+.descriptionWelcomeNote{
+  width: 632px;
+  margin-left: 25px;
+  margin-top: 8px;
+  font-family: Axiforma  sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  color: #707066;
+}
+
+.projectCounter{
+  font-size:  16px;
+  color:   #050504;
+  line-height:  130%;
+  font-family:  Axiforma , sans-serif;
+  font-style:  normal;
+  font-weight:  600;
+}
+
+.projectRemark{
+  font-size: 12px;
+  color: #707066;
+  line-height: 130%;
+  font-family: Axiforma , sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 
 .heading {
     /* width: 316px; */
     height: 44px !important;
-  
     /* Body 16 - Semi */
-  
     /* font-family: "Axiforma , sans-serif" !important; */
     font-style: normal;
     font-weight: 600 !important;
     font-size: 16px !important;
     line-height: 140% !important;
     /* or 22px */
-  
     /* Neutrals/Grey 1 */
-  
     color: #050504 !important;
   }
   
@@ -64,8 +100,8 @@
   }
   
   .timelineLink2 {
-    /* width: 122px;
-    height: 24px; */
+    float: right;
+    width: 122px;
     font-family: "Axiforma , sans-serif";
     font-style: normal;
     font-weight: 500;
@@ -76,6 +112,8 @@
     color: #55619c;
     padding-top: 4px;
     text-align: center;
+    transition: .5s ease-in;
+
   }
   
   .timelineLink2:hover {

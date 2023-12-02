@@ -19,6 +19,7 @@ const timeLineBalls = (n, onClick, current) =>
 
 export default function TimeLine() {
   const [width, setWidth] = useState(0);
+  // eslint-disable-next-line
   const [shouldIncrement, setShouldIncrement] = useState(1);
   const intermediaryBalls = 2;
   const calculatedWidth = (width / (intermediaryBalls + 1)) * 100;

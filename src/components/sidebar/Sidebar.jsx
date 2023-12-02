@@ -4,6 +4,7 @@ import "./sidebar.css";
 import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
 
 function Sidebar({ isOpen, setIsOpen, toggle }) {
+  // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState();
   const [isCollapsed1, setIsCollapsed1] = useState(false);
   const [isOpen1, setIsOpen1] = useState(true);
