@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./sidebar.css";
+import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
 
-function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
-  const toggle = () => setIsOpen(!isOpen);
+function Sidebar({ isOpen, setIsOpen, toggle }) {
   const [isCollapsed, setIsCollapsed] = useState();
   const [isCollapsed1, setIsCollapsed1] = useState(false);
   const [isOpen1, setIsOpen1] = useState(true);
@@ -14,20 +13,14 @@ function Sidebar() {
     setIsOpen1((prevState) => !prevState);
   };
 
- 
   useEffect(() => {
     if (!isOpen) {
       handleDropdownToggle();
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) {
       setIsOpen1(true); // Set isOpen1 to true when sidebar is closed
     }
   }, [isOpen]);
 
-   useEffect(() => {
+  useEffect(() => {
     if (menuRef.current) {
       const children = menuRef.current.children;
       let totalHeight = 0;
@@ -37,7 +30,6 @@ function Sidebar() {
       menuRef.current.style.height = isOpen1 ? `${totalHeight}px` : "0";
     }
   }, [isOpen1]);
-
 
   return (
     <>
@@ -160,49 +152,22 @@ function Sidebar() {
                 transition: ".5s ease-in",
               }}
             >
-              <li className="link" style={{ background: "#ECEDF3" }}>
-                <div className="icon">
-                  <img
-                    className="dashboard-icone-img"
-                    src="/icon/dashbord.png"
-                    alt="dashboard icon"
-                  />
-                </div>
-                <div className="link_text">Dashboard</div>
-              </li>
-
-              <li className="link">
-                <div className="icon">
-                  <img
-                    className="dashboard-icone-img"
-                    src="/icon/chat.png"
-                    alt="dashboard icon"
-                  />
-                </div>
-                <div className="link_text">Chat</div>
-              </li>
-
-              <li className="link">
-                <div className="icon">
-                  <img
-                    className="dashboard-icone-img"
-                    src="/icon/service.png"
-                    alt="dashboard icon"
-                  />
-                </div>
-                <div className="link_text">Services</div>
-              </li>
-
-              <li className="link">
-                <div className="icon">
-                  <img
-                    className="dashboard-icone-img"
-                    src="/icon/add.png"
-                    alt="dashboard icon"
-                  />
-                </div>
-                <div className="link_text">Add</div>
-              </li>
+              {mainLinks.map((props, index) => (
+                <li
+                  key={props.id}
+                  className="link"
+                  style={{ background: index === 0 && "#ECEDF3" }}
+                >
+                  <div className="icon">
+                    <img
+                      className="dashboard-icone-img"
+                      src={props.imgUrl}
+                      alt={props.alt}
+                    />
+                  </div>
+                  <div className="link_text">{props.linkName}</div>
+                </li>
+              ))}
             </ul>
           </div>
           <hr
@@ -217,13 +182,13 @@ function Sidebar() {
             <span
               style={{
                 // display: isOpen ? "block" : "none",
-                visibility: isOpen ? "visible " : "hidden",  // for smoth behav if we use display block and none then smothnes not working
+                visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
                 transition: ".5s ease-in",
                 marginLeft: "32px",
                 marginTop: "10px",
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               onClick={handleDropdownToggle}
             >
@@ -233,12 +198,11 @@ function Sidebar() {
               className="collapse-content"
               style={{
                 display: isCollapsed && isOpen ? "none" : "block",
-                marginTop: isOpen ?  "6px" : "-20px",
+                marginTop: isOpen ? "6px" : "-20px",
                 transition: ".5s ease-in",
               }}
-            
             >
-              <div className="dashboard-Main-link" >
+              <div className="dashboard-Main-link">
                 <ul
                   className="p-0 mb-0"
                   style={{
@@ -247,36 +211,18 @@ function Sidebar() {
                   }}
                   ref={menuRef}
                 >
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="dashboard-icone-img"
-                        src="/icon/alert.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Notification</div>
-                  </li>
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="dashboard-icone-img"
-                        src="/icon/shudailMeeting.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Schedule a 30 min meeting</div>
-                  </li>
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="dashboard-icone-img"
-                        src="/icon/setting.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Setting</div>
-                  </li>
+                  {accountLinks.map((props) => (
+                    <li className="link link-collaps">
+                      <div className="icon">
+                        <img
+                          className="dashboard-icone-img"
+                          src={props.imgUrl}
+                          alt={props.alt}
+                        />
+                      </div>
+                      <div className="link_text">{props.linkName}</div>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -320,36 +266,18 @@ function Sidebar() {
                     transition: ".5s ease-in",
                   }}
                 >
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="/icon/"
-                        src="/icon/finance.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Finances</div>
-                  </li>
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="icon"
-                        src="/icon/mail.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Mails</div>
-                  </li>
-                  <li className="link link-collaps">
-                    <div className="icon">
-                      <img
-                        className="/icon"
-                        src="/icon/meeting.png"
-                        alt="dashboard icon"
-                      />
-                    </div>
-                    <div className="link_text">Meetings</div>
-                  </li>
+                  {upcomingLinks.map((props) => (
+                    <li key={props.id} className="link link-collaps">
+                      <div className="icon">
+                        <img
+                          className="icon"
+                          src={props.imgUrl}
+                          alt={props.alt}
+                        />
+                      </div>
+                      <div className="link_text">{props.linkName}</div>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

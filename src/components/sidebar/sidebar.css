@@ -171,3 +171,18 @@
     margin-left: 2.255em !important;
   }
   
+  span {
+    width: 228px;
+    height: 20px;
+    font-family: "Axiforma , sans-serif !important";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #707066;
+    margin-left: 16px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+  }
+  
