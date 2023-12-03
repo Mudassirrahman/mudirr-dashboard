@@ -18,9 +18,9 @@ function Sidebar({
   const [searchFocused, setSearchFocused] = useState(false);
   const menuRef = useRef(null);
 
-  const handleDropdownToggle = () => {
+   const handleDropdownToggle = useCallback(() => {
     setIsOpen1((prevState) => !prevState);
-  };
+  }, [setIsOpen1]);
 
   useEffect(() => {
     if (!isOpen) {
