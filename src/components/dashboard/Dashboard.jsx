@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectHistoryTabs from "./ProjectHistoryTabs";
 import "./dashboard.css";
+import { ProjectTimeLineCardData } from "./ProjectTimeLineCardData";
 
 const projectsTrackeingDisplayData = [
   {
@@ -34,6 +35,24 @@ const projectsTrackeingDisplayData = [
 ];
 
 function Dashboard({ isOpen, setIsOpen, toggle }) {
+  const [projectsCount, setProjectsCount] = useState([]);
+
+  useEffect(() => {
+    const initialCounts = {
+      Completed: 0,
+      Ongoing: 0,
+      Drafts: 0,
+      Cancelled: 0,
+    };
+
+    const counts = ProjectTimeLineCardData.reduce((acc, project) => {
+      acc[project.status] = (acc[project.status] || 0) + 1;
+      return acc;
+    }, initialCounts);
+
+    setProjectsCount(counts);
+  }, []);
+
   return (
     <>
       {/* dashbord content */}
@@ -73,7 +92,7 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
                 />
               </div>
               <div>
-                <h3 className="projectCounter">{props.projectCounter}</h3>
+                <h3 className="projectCounter">{projectsCount[props.projectRemark]}</h3>
                 <h4 className="projectRemark">{props.projectRemark}</h4>
               </div>
             </div>
@@ -90,6 +109,7 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             toggle={toggle}
+            projectsCount={projectsCount}
           />
         </div>
       </div>

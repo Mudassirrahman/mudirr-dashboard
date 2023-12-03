@@ -1,45 +1,23 @@
 import React from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import TimeLine from "./TimeLine";
-import "./dashboard.css"
+import "./dashboard.css";
+import { ProjectTimeLineCardData } from "./ProjectTimeLineCardData";
 
-const data = [
-  {
-    id: "1"  , 
-    heading: "Make an E-Commerce Website for a Brand Store",
-    tags: ["web"],
-    timeline: "some timeline data",
-    status: "Ongoing",
-    milestone: "Next milestone: Dec 5th",
-    task: "Follow up with manager",
-  },
-  {
-    id: "2"  , 
-    heading: "Website technical maintenance project",
-    tags: ["web"],
-    timeline: "some timeline data",
-    status: "Ongoing",
-    milestone: "Next milestone: Jan 1st",
-    task: "Follow up with manager",
-  },
-  {
-    id: "3"   ,
-    heading: "WordPress website speed and SEO Optimization",
-    tags: ["web"],
-    timeline: "some timeline data",
-    status: "Ongoing",
-    milestone: "Next milestone: in 3 days",
-    task: "Follow up with manager",
-  },
-  // more objects representing data for other items
-];
 
-function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
+function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount }) {
+  const filteredData = status
+    ? ProjectTimeLineCardData.filter((item) => item.status === status)
+    : ProjectTimeLineCardData;
+
   return (
     <>
       <div className=" m-0 p-0 ">
-        <div className="row " style={{ gap: "32px", flexWrap: "nowrap" }}>
-          {data.map((item) => (
+        <div
+          className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+          style={{ gap: "24px", flexWrap: "wrap" }}
+        >
+          {filteredData.map((item) => (
             <div
               className="card mb-2"
               style={{
@@ -64,7 +42,6 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                       transition: ".5s ease-in",
                       fontFamily: "Axiforma , sans-serif",
                     }}
-                    key={item.id}
                   >
                     {item.heading}
                   </h3>
@@ -107,11 +84,9 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                       fontWeight: "400",
                       fontSize: "12px",
                       lineHeight: "130%",
-                      textAlign: "center",
                       padding: "4px 8px",
                       color: "#55619C",
                     }}
-                    key={item.id}
                   >
                     {item.status}
                   </h5>
@@ -119,19 +94,17 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                     className="mb-0"
                     style={{
                       marginTop: "7px",
-                      width: "149px",
+                      maxWidth: "170px",
                       borderRadius: "4px",
                       fontFamily: "Axiforma , sans-serif",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "12px",
                       lineHeight: "130%",
-                      textAlign: "center",
                       backgroundColor: "#ECEDF3",
-                      padding: "4px 0px",
+                      padding: "4px 8px",
                       color: "#55619C",
                     }}
-                    key={item.id}
                   >
                     {item.milestone}
                   </h5>
@@ -150,7 +123,6 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                         marginTop: "18px",
                         fontFamily: "Axiforma , sans-serif",
                       }}
-                      key={item.id}
                     >
                       {item.task}
                     </h3>
@@ -165,7 +137,12 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle }) {
                           height: "40px",
                         }}
                       >
-                        <img src="/cardBtn.png" alt="button" width={21} height={18} />
+                        <img
+                          src="/cardBtn.png"
+                          alt="button"
+                          width={21}
+                          height={18}
+                        />
                       </button>
                     </a>
                   </div>

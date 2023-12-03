@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ProjectTimeLineCard from "./ProjectTimeLineCard";
 import "./dashboard.css"
-function ProjectHistoryTabs ({isOpen, setIsOpen, toggle}) {
+function ProjectHistoryTabs ({isOpen, setIsOpen, toggle, projectsCount}) {
   return (
     <Tabs>
       <TabList style={{ marginTop: "67px", marginLeft: "25px" , display:"flex" ,  }}>
@@ -24,19 +24,19 @@ function ProjectHistoryTabs ({isOpen, setIsOpen, toggle}) {
       </TabList>
 
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}  />
+        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}  status="Ongoing"  />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}  />
+        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Completed" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}  />
+        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Cancelled" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}  />
+        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Drafts" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}  />
+        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}   />
       </TabPanel>
     </Tabs>
   );
