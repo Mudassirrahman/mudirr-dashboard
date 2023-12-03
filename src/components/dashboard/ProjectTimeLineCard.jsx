@@ -25,7 +25,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount 
                 paddingTop: "13px",
                 paddingBottom: "26px",
                 borderRadius: "0px",
-                height: "268px",
+                height: status !== "Completed" ? "268px" : "230px",
                 width: isOpen ? "300px " : "380px",
                 transition: ".5s ease-in",
                 border: "0.5px solid #DADAD7",
@@ -69,7 +69,8 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount 
                   ))}
                 </div>
                 <div className="" style={{ marginTop: "27px" }}>
-                  <TimeLine />
+                {status !== "Completed" &&  <TimeLine />}
+                 
                 </div>
                 <div className="" style={{ marginTop: "17px" }}>
                   <h5

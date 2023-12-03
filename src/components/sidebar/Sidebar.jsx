@@ -18,7 +18,7 @@ function Sidebar({
   const [searchFocused, setSearchFocused] = useState(false);
   const menuRef = useRef(null);
 
-   const handleDropdownToggle = useCallback(() => {
+  const handleDropdownToggle = useCallback(() => {
     setIsOpen1((prevState) => !prevState);
   }, [setIsOpen1]);
 
@@ -186,7 +186,16 @@ function Sidebar({
                       alt={props.alt}
                     />
                   </div>
-                  <div className="link_text">{props.linkName}</div>
+                  <div
+                    className="link_text"
+                    style={{
+                      color:
+                        selectedTab === props.linkName ? "#55619C" : "#050504",
+                      fontWeight: selectedTab === props.linkName ? 600 : 400,
+                    }}
+                  >
+                    {props.linkName}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -241,7 +250,19 @@ function Sidebar({
                           alt={props.alt}
                         />
                       </div>
-                      <div className="link_text">{props.linkName}</div>
+                      <div
+                        className="link_text"
+                        style={{
+                          color:
+                            selectedTab === props.linkName
+                              ? "#55619C"
+                              : "#050504",
+                          fontWeight:
+                            selectedTab === props.linkName ? 600 : 400,
+                        }}
+                      >
+                        {props.linkName}
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -296,7 +317,19 @@ function Sidebar({
                           alt={props.alt}
                         />
                       </div>
-                      <div className="link_text">{props.linkName}</div>
+                      <div
+                        className="link_text"
+                        style={{
+                          color:
+                            selectedTab === props.linkName
+                              ? "#55619C"
+                              : "#050504",
+                          fontWeight:
+                            selectedTab === props.linkName ? 600 : 400,
+                        }}
+                      >
+                        {props.linkName}
+                      </div>
                     </li>
                   ))}
                 </ul>
