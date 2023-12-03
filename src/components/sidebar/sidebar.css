@@ -94,8 +94,9 @@
     position: absolute;
     top: 12px;
     transition: .5s ease-in;
-    width: 18.2px;
-    height: 18.2px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
   }
 
   .dashboard-Main-link{

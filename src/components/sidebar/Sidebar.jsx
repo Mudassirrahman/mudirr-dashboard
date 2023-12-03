@@ -3,11 +3,19 @@ import { AiOutlineSearch } from "react-icons/ai";
 import "./sidebar.css";
 import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
 
-function Sidebar({ isOpen, setIsOpen, toggle }) {
+function Sidebar({
+  isOpen,
+  setIsOpen,
+  toggle,
+  selectedTab,
+  setSelectedTab,
+  handleSelectedTab,
+}) {
   // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState();
   const [isCollapsed1, setIsCollapsed1] = useState(false);
   const [isOpen1, setIsOpen1] = useState(true);
+  const [searchFocused, setSearchFocused] = useState(false);
   const menuRef = useRef(null);
 
   const handleDropdownToggle = () => {
@@ -19,9 +27,7 @@ function Sidebar({ isOpen, setIsOpen, toggle }) {
       handleDropdownToggle();
       setIsOpen1(true); // Set isOpen1 to true when sidebar is closed
     }
-  }, [isOpen]);
 
-  useEffect(() => {
     if (menuRef.current) {
       const children = menuRef.current.children;
       let totalHeight = 0;
@@ -30,7 +36,14 @@ function Sidebar({ isOpen, setIsOpen, toggle }) {
       }
       menuRef.current.style.height = isOpen1 ? `${totalHeight}px` : "0";
     }
-  }, [isOpen1]);
+  }, [isOpen, isOpen1, handleDropdownToggle]);
+
+  const handleSearchClick = () => {
+    if (!isOpen) {
+      setIsOpen(true); // Open the sidebar if it's closed when the search icon is clicked
+    }
+    setSearchFocused(true);
+  };
 
   return (
     <>
@@ -139,10 +152,12 @@ function Sidebar({ isOpen, setIsOpen, toggle }) {
                 height: isOpen ? "40px" : "20",
                 opacity: isOpen ? "1 " : "0",
               }}
+              autoFocus={searchFocused}
             />
             <AiOutlineSearch
               className="sarch-icon"
               style={{ left: isOpen ? "270.42px" : "35.4px" }}
+              onClick={handleSearchClick}
             />
           </div>
           <div className="dashboard-Main-link">
@@ -157,7 +172,12 @@ function Sidebar({ isOpen, setIsOpen, toggle }) {
                 <li
                   key={props.id}
                   className="link"
-                  style={{ background: index === 0 && "#ECEDF3" }}
+                  style={{
+                    background: selectedTab === props.linkName && "#ECEDF3",
+                  }}
+                  onClick={() => {
+                    handleSelectedTab(props.linkName);
+                  }}
                 >
                   <div className="icon">
                     <img
