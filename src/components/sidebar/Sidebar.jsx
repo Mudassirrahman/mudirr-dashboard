@@ -168,7 +168,7 @@ function Sidebar({
                 transition: ".5s ease-in",
               }}
             >
-              {mainLinks.map((props, index) => (
+              {mainLinks.map((props) => (
                 <li
                   key={props.id}
                   className="link"
@@ -178,14 +178,21 @@ function Sidebar({
                   onClick={() => {
                     handleSelectedTab(props.linkName);
                   }}
-                >
-                  <div className="icon">
+                > 
+                 <a href="">
+                 <div className="icon">
                     <img
                       className="dashboard-icone-img"
                       src={props.imgUrl}
                       alt={props.alt}
                     />
                   </div>
+                  </a>
+                  <a className=" text-decoration-none" href="" style={{
+                    visibility: isOpen ? "visible " : "hidden",
+                    transition: ".4s ease-in",
+                    overflow: "hidden"
+                  }}>
                   <div
                     className="link_text"
                     style={{
@@ -196,6 +203,7 @@ function Sidebar({
                   >
                     {props.linkName}
                   </div>
+                 </a>
                 </li>
               ))}
             </ul>
@@ -242,7 +250,7 @@ function Sidebar({
                   ref={menuRef}
                 >
                   {accountLinks.map((props) => (
-                    <li className="link link-collaps">
+                    <li className="link link-collaps" key={props.id}>
                       <div className="icon">
                         <img
                           className="dashboard-icone-img"

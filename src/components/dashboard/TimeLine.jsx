@@ -6,7 +6,6 @@ const timeLineBalls = (n, onClick, current) =>
   Array(n)
     .fill(0)
     .map((i, index) => (
-      <>
         <div
           key={index}
           className={`timeline__ball ${current >= index ? "active" : null}`}
@@ -14,7 +13,6 @@ const timeLineBalls = (n, onClick, current) =>
         >
           {/* {index + 1} */}
         </div>
-      </>
     ));
 
 export default function TimeLine() {

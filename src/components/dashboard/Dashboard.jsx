@@ -82,7 +82,7 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
           }}
         >
           {projectsTrackeingDisplayData.map((props) => (
-            <div className="d-flex gap-2">
+            <div className="d-flex gap-2" key={props.id}>
               <div>
                 <img
                   src={props.imgUrl}

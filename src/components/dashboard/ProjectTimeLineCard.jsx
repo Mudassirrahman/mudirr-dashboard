@@ -129,7 +129,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount 
                     </h3>
                   </div>
                   <div className="">
-                    <a href="/ProjectDetail">
+                    <a href="">
                       <button
                         className="btn btn-bg-light text-white projectCardButton"
                         style={{
