@@ -16,7 +16,6 @@ function Sidebar() {
     useContext(AppStateContext);
   // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState();
-  const [isCollapsed1, setIsCollapsed1] = useState(false);
   const [isOpenForAccount, setIsOpenForAccount] = useState(true);
   const [isOpenForUpComing, setIsOpenForUpComing] = useState(true);
   const [searchFocused, setSearchFocused] = useState(false);
@@ -344,7 +343,6 @@ function Sidebar() {
                 marginTop: isOpen ? "6px" : "-20px",
                 transition: ".5s ease-in",
               }}
-              aria-expanded={isCollapsed1}
             >
               <div className="dashboard-Main-link">
                 <ul
