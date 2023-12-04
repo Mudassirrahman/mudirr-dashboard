@@ -1,16 +1,19 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./sidebar.css";
 import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
+import { AppStateContext } from "../../store/aap-state-store";
+import { Link } from "react-router-dom";
 
-function Sidebar({
-  isOpen,
-  setIsOpen,
-  toggle,
-  selectedTab,
-  setSelectedTab,
-  handleSelectedTab,
-}) {
+function Sidebar() {
+
+  const {
+    isOpen,
+    setIsOpen,
+    selectedTab,
+    toggle,
+    handleSelectedTab
+  } = useContext(AppStateContext);
   // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState();
   const [isCollapsed1, setIsCollapsed1] = useState(false);
@@ -179,7 +182,7 @@ function Sidebar({
                     handleSelectedTab(props.linkName);
                   }}
                 > 
-                 <a href="">
+                 <Link to={props.linkName}>
                  <div className="icon">
                     <img
                       className="dashboard-icone-img"
@@ -187,8 +190,8 @@ function Sidebar({
                       alt={props.alt}
                     />
                   </div>
-                  </a>
-                  <a className=" text-decoration-none" href="" style={{
+                  </Link>
+                  <Link to={props.linkName} className=" text-decoration-none" href="" style={{
                     visibility: isOpen ? "visible " : "hidden",
                     transition: ".4s ease-in",
                     overflow: "hidden"
@@ -203,7 +206,7 @@ function Sidebar({
                   >
                     {props.linkName}
                   </div>
-                 </a>
+                 </Link>
                 </li>
               ))}
             </ul>

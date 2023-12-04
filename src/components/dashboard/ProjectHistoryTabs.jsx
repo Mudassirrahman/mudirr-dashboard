@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ProjectTimeLineCard from "./ProjectTimeLineCard";
 import "./dashboard.css"
-function ProjectHistoryTabs ({isOpen, setIsOpen, toggle, projectsCount}) {
+import { AppStateContext } from "../../store/aap-state-store";
+function ProjectHistoryTabs ({projectsCount}) {
+  const { isOpen } = useContext(AppStateContext);
   return (
     <Tabs>
       <TabList style={{ marginTop: "67px", marginLeft: "25px" , display:"flex" ,  }}>
@@ -24,19 +26,19 @@ function ProjectHistoryTabs ({isOpen, setIsOpen, toggle, projectsCount}) {
       </TabList>
 
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}  status="Ongoing"  />
+        <ProjectTimeLineCard  projectsCount={projectsCount}  status="Ongoing"  />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Completed" />
+        <ProjectTimeLineCard  projectsCount={projectsCount}   status="Completed" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Cancelled" />
+        <ProjectTimeLineCard  projectsCount={projectsCount}   status="Cancelled" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} projectsCount={projectsCount}   status="Drafts" />
+        <ProjectTimeLineCard  projectsCount={projectsCount}   status="Drafts" />
       </TabPanel>
       <TabPanel style={{ marginTop: "32px", marginLeft: "35px" }}>
-        <ProjectTimeLineCard  isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle}   />
+        <ProjectTimeLineCard   />
       </TabPanel>
     </Tabs>
   );

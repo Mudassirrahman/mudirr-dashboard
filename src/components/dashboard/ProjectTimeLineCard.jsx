@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import TimeLine from "./TimeLine";
 import "./dashboard.css";
 import { ProjectTimeLineCardData } from "./ProjectTimeLineCardData";
+import { AppStateContext } from "../../store/aap-state-store";
+import { Link } from "react-router-dom";
 
 
-function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount }) {
+function ProjectTimeLineCard({  status, projectsCount }) {
+  const { isOpen } = useContext(AppStateContext);
   const filteredData = status
     ? ProjectTimeLineCardData.filter((item) => item.status === status)
     : ProjectTimeLineCardData;
@@ -129,7 +132,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount 
                     </h3>
                   </div>
                   <div className="">
-                    <a href="">
+                    <Link to="/manage-project">
                       <button
                         className="btn btn-bg-light text-white projectCardButton"
                         style={{
@@ -145,7 +148,7 @@ function ProjectTimeLineCard({ isOpen, setIsOpen, toggle, status, projectsCount 
                           height={18}
                         />
                       </button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

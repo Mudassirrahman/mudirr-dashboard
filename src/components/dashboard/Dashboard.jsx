@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ProjectHistoryTabs from "./ProjectHistoryTabs";
 import "./dashboard.css";
 import { ProjectTimeLineCardData } from "./ProjectTimeLineCardData";
+import { AppStateContext } from "../../store/aap-state-store";
 
 const projectsTrackeingDisplayData = [
   {
@@ -34,7 +35,8 @@ const projectsTrackeingDisplayData = [
   },
 ];
 
-function Dashboard({ isOpen, setIsOpen, toggle }) {
+function Dashboard() {
+  const { isOpen } = useContext(AppStateContext);
   const [projectsCount, setProjectsCount] = useState([]);
 
   useEffect(() => {
@@ -77,7 +79,7 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
           style={{
             marginLeft: "25px",
             gap: isOpen ? "52px" : "92px",
-            transition:".5s ease-in",
+            transition: ".5s ease-in",
             marginTop: "32px",
           }}
         >
@@ -92,7 +94,9 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
                 />
               </div>
               <div>
-                <h3 className="projectCounter">{projectsCount[props.projectRemark]}</h3>
+                <h3 className="projectCounter">
+                  {projectsCount[props.projectRemark]}
+                </h3>
                 <h4 className="projectRemark">{props.projectRemark}</h4>
               </div>
             </div>
@@ -105,12 +109,7 @@ function Dashboard({ isOpen, setIsOpen, toggle }) {
             transition: ".5s ease-in",
           }}
         >
-          <ProjectHistoryTabs
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            toggle={toggle}
-            projectsCount={projectsCount}
-          />
+          <ProjectHistoryTabs projectsCount={projectsCount} />
         </div>
       </div>
     </>

@@ -1,12 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { MdOutlineRefresh } from "react-icons/md";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TfiLayers } from "react-icons/tfi";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { RxVideo } from "react-icons/rx";
-import Sidebar from "../sidebar/Sidebar";
+import { AppStateContext } from "../../store/aap-state-store";
 
-function ManageProject({ isOpen, setIsOpen, toggle }) {
+function ManageProject() {
+  const { isOpen } = useContext(AppStateContext);
   const [isCollapsed1, setIsCollapsed1] = useState();
   const [isOpen1, setIsOpen1] = useState(false);
   const menuRef = useRef(null);
@@ -61,8 +62,6 @@ function ManageProject({ isOpen, setIsOpen, toggle }) {
   return (
     <div className="container p-0 m-0">
       <div className="row d-flex justify-content-between">
-        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
-
         <div
           className="col-md-6 col-lg-8 position-absolute main"
           style={{
@@ -71,8 +70,7 @@ function ManageProject({ isOpen, setIsOpen, toggle }) {
             width: isOpen ? "632px" : "876px",
             transition: isOpen ? "all .8s" : ".8s",
           }}
-        >
-        </div>
+        ></div>
         <div
           className="col-md-6 col-lg-8 position-absolute main"
           style={{
@@ -113,8 +111,7 @@ function ManageProject({ isOpen, setIsOpen, toggle }) {
             </div>
           </div>
           {/* <Tabs2 /> */}
-          <div style={{ marginTop: "23px" }}>
-          </div>
+          <div style={{ marginTop: "23px" }}></div>
         </div>
         <div
           className="col-3 position-absolute end-0 top-0 "
@@ -391,7 +388,6 @@ function ManageProject({ isOpen, setIsOpen, toggle }) {
                 //   width:"100%"
                 // }}
                 />
-
               </div>
             </div>
           </div>
