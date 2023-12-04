@@ -1,4 +1,10 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./sidebar.css";
 import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
@@ -6,40 +12,61 @@ import { AppStateContext } from "../../store/aap-state-store";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
-
-  const {
-    isOpen,
-    setIsOpen,
-    selectedTab,
-    toggle,
-    handleSelectedTab
-  } = useContext(AppStateContext);
+  const { isOpen, setIsOpen, selectedTab, toggle, handleSelectedTab } =
+    useContext(AppStateContext);
   // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState();
   const [isCollapsed1, setIsCollapsed1] = useState(false);
-  const [isOpen1, setIsOpen1] = useState(true);
+  const [isOpenForAccount, setIsOpenForAccount] = useState(true);
+  const [isOpenForUpComing, setIsOpenForUpComing] = useState(true);
   const [searchFocused, setSearchFocused] = useState(false);
-  const menuRef = useRef(null);
+  const menuRefAccount = useRef(null);
+  const menuRefUpcoming = useRef(null);
 
-  const handleDropdownToggle = useCallback(() => {
-    setIsOpen1((prevState) => !prevState);
-  }, [setIsOpen1]);
+  const handleAccountDropdownToggle = useCallback(() => {
+    setIsOpenForAccount((prevState) => !prevState);
+  }, [setIsOpenForAccount]);
+
+  const handleUpcomingDropdownToggle = useCallback(() => {
+    setIsOpenForUpComing((prevState) => !prevState);
+  }, [setIsOpenForUpComing]);
 
   useEffect(() => {
     if (!isOpen) {
-      handleDropdownToggle();
-      setIsOpen1(true); // Set isOpen1 to true when sidebar is closed
+      handleAccountDropdownToggle();
+      setIsOpenForAccount(true); // Set isOpenForAccount to true when sidebar is closed
+      handleUpcomingDropdownToggle();
+      setIsOpenForUpComing(true); // Set isOpenForAccount to true when sidebar is closed
     }
 
-    if (menuRef.current) {
-      const children = menuRef.current.children;
+    if (menuRefAccount.current) {
+      const children = menuRefAccount.current.children;
       let totalHeight = 0;
       for (let i = 0; i < children.length; i++) {
         totalHeight += children[i].clientHeight;
       }
-      menuRef.current.style.height = isOpen1 ? `${totalHeight}px` : "0";
+      menuRefAccount.current.style.height = isOpenForAccount
+        ? `${totalHeight}px`
+        : "0";
     }
-  }, [isOpen, isOpen1, handleDropdownToggle]);
+
+    if (menuRefUpcoming.current) {
+      const children = menuRefUpcoming.current.children;
+      let totalHeight = 0;
+      for (let i = 0; i < children.length; i++) {
+        totalHeight += children[i].clientHeight;
+      }
+      menuRefUpcoming.current.style.height = isOpenForUpComing
+        ? `${totalHeight}px`
+        : "0";
+    }
+  }, [
+    isOpen,
+    isOpenForAccount,
+    isOpenForUpComing,
+    handleAccountDropdownToggle,
+    handleUpcomingDropdownToggle,
+  ]);
 
   const handleSearchClick = () => {
     if (!isOpen) {
@@ -181,32 +208,39 @@ function Sidebar() {
                   onClick={() => {
                     handleSelectedTab(props.linkName);
                   }}
-                > 
-                 <Link to={props.linkName}>
-                 <div className="icon">
-                    <img
-                      className="dashboard-icone-img"
-                      src={props.imgUrl}
-                      alt={props.alt}
-                    />
-                  </div>
+                >
+                  <Link to={props.linkName}>
+                    <div className="icon">
+                      <img
+                        className="dashboard-icone-img"
+                        src={props.imgUrl}
+                        alt={props.alt}
+                      />
+                    </div>
                   </Link>
-                  <Link to={props.linkName} className=" text-decoration-none" href="" style={{
-                    visibility: isOpen ? "visible " : "hidden",
-                    transition: ".4s ease-in",
-                    overflow: "hidden"
-                  }}>
-                  <div
-                    className="link_text"
+                  <Link
+                    to={props.linkName}
+                    className=" text-decoration-none"
+                    href=""
                     style={{
-                      color:
-                        selectedTab === props.linkName ? "#55619C" : "#050504",
-                      fontWeight: selectedTab === props.linkName ? 600 : 400,
+                      visibility: isOpen ? "visible " : "hidden",
+                      transition: ".4s ease-in",
+                      overflow: "hidden",
                     }}
                   >
-                    {props.linkName}
-                  </div>
-                 </Link>
+                    <div
+                      className="link_text"
+                      style={{
+                        color:
+                          selectedTab === props.linkName
+                            ? "#55619C"
+                            : "#050504",
+                        fontWeight: selectedTab === props.linkName ? 600 : 400,
+                      }}
+                    >
+                      {props.linkName}
+                    </div>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -231,7 +265,7 @@ function Sidebar() {
                 fontWeight: "600",
                 cursor: "pointer",
               }}
-              onClick={handleDropdownToggle}
+              onClick={handleAccountDropdownToggle}
             >
               Account
             </span>
@@ -250,7 +284,7 @@ function Sidebar() {
                     overflow: "hidden",
                     transition: ".5s ease-in",
                   }}
-                  ref={menuRef}
+                  ref={menuRefAccount}
                 >
                   {accountLinks.map((props) => (
                     <li className="link link-collaps" key={props.id}>
@@ -291,22 +325,23 @@ function Sidebar() {
           <div>
             <span
               style={{
-                display: isOpen ? "block" : "none",
+                // display: isOpen ? "block" : "none",
+                visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
                 transition: ".5s ease-in",
                 marginLeft: "32px",
                 marginTop: "10px",
                 fontFamily: "Axiforma , sans-serif",
                 fontWeight: "600",
               }}
-              onClick={() => setIsCollapsed1(!isCollapsed1)}
+              onClick={handleUpcomingDropdownToggle}
             >
               Upcoming
             </span>
             <div
               className="collapse-content"
               style={{
-                display: isCollapsed1 && isOpen ? "none" : "block",
-                marginTop: "6px",
+                display: isCollapsed && isOpen ? "none" : "block",
+                marginTop: isOpen ? "6px" : "-20px",
                 transition: ".5s ease-in",
               }}
               aria-expanded={isCollapsed1}
@@ -318,6 +353,7 @@ function Sidebar() {
                     overflow: "hidden",
                     transition: ".5s ease-in",
                   }}
+                  ref={menuRefUpcoming}
                 >
                   {upcomingLinks.map((props) => (
                     <li key={props.id} className="link link-collaps">
