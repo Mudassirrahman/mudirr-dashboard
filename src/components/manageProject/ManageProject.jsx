@@ -5,6 +5,9 @@ import { TfiLayers } from "react-icons/tfi";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { RxVideo } from "react-icons/rx";
 import { AppStateContext } from "../../store/aap-state-store";
+import ProjectControllerTabs from "./ProjectControllerTabs";
+import CountDownTimer from "./CountDownTimer";
+import MileStoneTimeLine from "./MileStoneTimeLine";
 
 function ManageProject() {
   const { isOpen } = useContext(AppStateContext);
@@ -68,7 +71,7 @@ function ManageProject() {
             left: isOpen ? "340px" : "98px",
             marginLeft: "18px",
             width: isOpen ? "632px" : "876px",
-            transition: isOpen ? "all .8s" : ".8s",
+            transition: ".5s ease-in",
           }}
         ></div>
         <div
@@ -77,7 +80,7 @@ function ManageProject() {
             left: isOpen ? "340px" : "98px",
             marginLeft: "20px",
             width: isOpen ? "632px" : "876px",
-            transition: isOpen ? " .8s ease-in" : ".8s ease-in",
+            transition:  ".5s ease-in",
           }}
         >
           <div className="d-flex" style={{ gap: "29px" }}>
@@ -110,13 +113,15 @@ function ManageProject() {
               </h1>
             </div>
           </div>
-          {/* <Tabs2 /> */}
-          <div style={{ marginTop: "23px" }}></div>
+          <div style={{ marginTop: "23px" }}>
+            <ProjectControllerTabs />
+          </div>
         </div>
         <div
           className="col-3 position-absolute end-0 top-0 "
           style={{ marginTop: "56px" }}
         >
+          <CountDownTimer />
           <div className="card" style={{ marginTop: "24px" }}>
             <div className="card-body">
               <div
@@ -132,7 +137,7 @@ function ManageProject() {
               </p>
             </div>
           </div>
-          <div
+          {/* <div
             className="card"
             style={{
               marginTop: "24px",
@@ -388,6 +393,8 @@ function ManageProject() {
                 //   width:"100%"
                 // }}
                 />
+
+                <MileStoneTimeLine />
               </div>
             </div>
           </div>
@@ -496,7 +503,7 @@ function ManageProject() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
