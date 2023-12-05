@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { IoIosArrowDown } from "react-icons/io";
 import "./sidebar.css";
 import { accountLinks, mainLinks, upcomingLinks } from "./SidebarData";
 import { AppStateContext } from "../../store/aap-state-store";
@@ -128,12 +129,13 @@ function Sidebar() {
                 className="rounded-circle me-2"
               />
 
-              <strong
-                className="dropdown-toggle acc-dropdown"
+              <h2
+                className=" acc-dropdown position-relative"
                 style={{ visibility: isOpen ? "visible " : "hidden" }}
               >
-                Mudassirrehman1989@email.com
-              </strong>
+                Mudassirrehman1989@gmail.com
+                <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: 0, right: 0}} />
+              </h2>
             </a>
 
             <ul
@@ -253,21 +255,23 @@ function Sidebar() {
           />
 
           <div>
-            <span
+            <h1 className="dropdownLinks-TITLE"
               style={{
                 // display: isOpen ? "block" : "none",
                 visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
                 transition: ".5s ease-in",
                 marginLeft: "32px",
                 marginTop: "10px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "Axiforma ",
                 fontWeight: "600",
                 cursor: "pointer",
+                position: "relative"
               }}
               onClick={handleAccountDropdownToggle}
             >
               Account
-            </span>
+              <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: "2px", right: 0}} />
+            </h1>
             <div
               className="collapse-content"
               style={{
@@ -322,20 +326,22 @@ function Sidebar() {
           />
 
           <div>
-            <span
+            <h1 className="dropdownLinks-TITLE"
               style={{
                 // display: isOpen ? "block" : "none",
                 visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
                 transition: ".5s ease-in",
                 marginLeft: "32px",
                 marginTop: "10px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "Axiforma ",
                 fontWeight: "600",
+                position: "relative"
               }}
               onClick={handleUpcomingDropdownToggle}
             >
               Upcoming
-            </span>
+              <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: "2px", right: 0}} />
+            </h1>
             <div
               className="collapse-content"
               style={{
@@ -379,6 +385,13 @@ function Sidebar() {
                   ))}
                 </ul>
               </div>
+              <hr
+            style={{
+              margin: "6px 17px 0",
+              width: isOpen ? "90%" : "65%",
+              transition: ".5s ease-in",
+            }}
+          />
             </div>
           </div>
         </div>

@@ -5,8 +5,7 @@ body {
   padding: 0;
   margin: 0;
   background: #F9F9FB;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue  , axiforma , sans-serif !important;
+  font-family: axiforma !important;
   /* font-size: calc(14px);  14px ~  */
   font-size: min(2.3vh, 12pt); /* 14px ~ 1.9vh */
   /*Prev was 2.4vh*/

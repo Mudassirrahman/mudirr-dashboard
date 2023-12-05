@@ -81,6 +81,7 @@ function Dashboard() {
             gap: isOpen ? "52px" : "92px",
             transition: ".5s ease-in",
             marginTop: "32px",
+            maxWidth: "935px"
           }}
         >
           {projectsTrackeingDisplayData.map((props) => (

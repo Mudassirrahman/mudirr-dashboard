@@ -17,8 +17,8 @@ function ProjectTimeLineCard({  status, projectsCount }) {
     <>
       <div className=" m-0 p-0 ">
         <div
-          className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
-          style={{ gap: "24px", flexWrap: "wrap" }}
+          className="row row-cols-1 row-cols-md-2 row-cols-lg-3"
+          style={{ gap: "20px", flexWrap: "wrap" }}
         >
           {filteredData.map((item) => (
             <div
@@ -27,7 +27,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                 paddingLeft: "19px",
                 paddingTop: "13px",
                 paddingBottom: "26px",
-                borderRadius: "0px",
+                borderRadius: "8px",
                 height: status !== "Completed" ? "268px" : "230px",
                 width: isOpen ? "300px " : "380px",
                 transition: ".5s ease-in",
@@ -43,7 +43,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     style={{
                       width: isOpen ? "236px" : "316px",
                       transition: ".5s ease-in",
-                      fontFamily: "Axiforma , sans-serif",
+                      fontFamily: "Axiforma ",
                     }}
                   >
                     {item.heading}
@@ -57,7 +57,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     <h4
                       className="m-0"
                       style={{
-                        fontFamily: "Axiforma , sans-serif",
+                        fontFamily: "Axiforma ",
                         fontStyle: "normal",
                         fontWeight: "400",
                         fontSize: "12px",
@@ -83,7 +83,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                       borderRadius: "4px",
                       width: "76px",
                       // height: "16px",
-                      fontFamily: "Axiforma , sans-serif",
+                      fontFamily: "Axiforma ",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "12px",
@@ -100,7 +100,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                       marginTop: "7px",
                       maxWidth: "170px",
                       borderRadius: "4px",
-                      fontFamily: "Axiforma , sans-serif",
+                      fontFamily: "Axiforma ",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "12px",
@@ -125,7 +125,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                         lineHeight: "140%",
                         color: " #050504",
                         marginTop: "18px",
-                        fontFamily: "Axiforma , sans-serif",
+                        fontFamily: "Axiforma ",
                       }}
                     >
                       {item.task}
