@@ -251,7 +251,7 @@ function Sidebar() {
               className="collapse-content"
               style={{
                 display: isCollapsed && isOpen ? "none" : "block",
-                marginTop: isOpen ? "6px" : "-20px",
+                marginTop: isOpen ? "6px" : "-25px",
                 transition: ".5s ease-in",
               }}
             >
@@ -316,7 +316,7 @@ function Sidebar() {
               className="collapse-content"
               style={{
                 display: isCollapsed && isOpen ? "none" : "block",
-                marginTop: isOpen ? "6px" : "-20px",
+                marginTop: isOpen ? "6px" : "-25px",
                 transition: ".5s ease-in",
               }}
             >
