@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Poppins:wght@400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.cdnfonts.com/css/axiforma');
+
+
+:root {
+  --main-font: 'Poppins', sans-serif;
+}
+
 .sidebar {
     color: #000;
     height: 748px;
@@ -52,17 +58,22 @@
     color: #000;
     cursor: pointer;
   }
+  .dropdown{
+    margin-top: 12px !important;
+    margin-left: 24px !important;
+    transition: .5s ease-in;
+  }
   
   .acc-dropdown{
     overflow: hidden;
     transition: .5s ease-in;
     margin-top: 12px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     width: 220px;
     height: 24px;
     align-items: center;
-    font-family: Axiforma;
+     font-family: var(--main-font);
 
   }
 
@@ -73,13 +84,28 @@
     overflow: hidden;
     width: 120px;
     text-wrap: wrap;
-    font-family: Axiforma;
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 130%;
     color: #707066;
     transition: .5s ease-in;
+  }
+
+  .profile-img{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .downArrow {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 0;
+    color: #707066;
   }
 
   .search-section{
@@ -108,6 +134,21 @@
 
   .dashboard-Main-link{
     margin-left: 24px;
+  }
+
+  .dashboard-Main-link-Ul {
+    margin-top: 10px;
+    transition: .5s ease-in;
+  }
+
+  .dashboard-second-link-ul{
+    overflow: hidden;
+    transition: .5s ease-in;
+  }
+  .dashboard-Main-link-name{
+    transition: .4s ease-in;
+    overflow: hidden;
+    text-decoration: none;
   }
   .link {
     display: flex;
@@ -148,7 +189,7 @@
   .link_text {
     width: 228px;
     height: 20px;
-    font-family: "Axiforma";
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -165,7 +206,7 @@
   .link_text:hover {
     width: 228px;
     height: 20px;
-    font-family: "Axiforma";
+     font-family: var(--main-font);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -183,15 +224,18 @@
   .dropdownLinks-TITLE {
     width: 260px;
     height: 20px;
-    font-family: "Axiforma !important";
     font-style: normal;
+    font-family: var(--main-font);
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
     color: #707066;
-    margin-left: 16px;
     cursor: pointer;
     display: block;
     overflow: hidden;
+    transition: .5s ease-in;
+    margin-left: 32px;
+    margin-top: 10px;
+    position: relative;
   }
   

@@ -103,14 +103,7 @@ function Sidebar() {
               onClick={toggle}
             />
           </div>
-          <div
-            className="dropdown"
-            style={{
-              marginTop: "12px",
-              marginLeft: "24px",
-              transition: ".5s ease-in",
-            }}
-          >
+          <div className="dropdown">
             <a
               href="/"
               className="d-flex  link-dark text-decoration-none "
@@ -119,14 +112,9 @@ function Sidebar() {
               aria-expanded="false"
             >
               <img
-                style={{
-                  marginTop: "10px",
-                }}
                 src="/DP.jpg"
                 alt="dm img"
-                width="40"
-                height="40"
-                className="rounded-circle me-2"
+                className="profile-img rounded-circle me-2"
               />
 
               <h2
@@ -134,7 +122,7 @@ function Sidebar() {
                 style={{ visibility: isOpen ? "visible " : "hidden" }}
               >
                 Mudassirrehman1989@gmail.com
-                <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: 0, right: 0}} />
+                <IoIosArrowDown className="downArrow" />
               </h2>
             </a>
 
@@ -192,13 +180,7 @@ function Sidebar() {
             />
           </div>
           <div className="dashboard-Main-link">
-            <ul
-              className="p-0  mb-0"
-              style={{
-                marginTop: "10px",
-                transition: ".5s ease-in",
-              }}
-            >
+            <ul className="dashboard-Main-link-Ul p-0  mb-0">
               {mainLinks.map((props) => (
                 <li
                   key={props.id}
@@ -221,13 +203,9 @@ function Sidebar() {
                   </Link>
                   <Link
                     to={props.linkName}
-                    className=" text-decoration-none"
+                    className="dashboard-Main-link-name"
                     href=""
-                    style={{
-                      visibility: isOpen ? "visible " : "hidden",
-                      transition: ".4s ease-in",
-                      overflow: "hidden",
-                    }}
+                    style={{ visibility: isOpen ? "visible " : "hidden" }}
                   >
                     <div
                       className="link_text"
@@ -255,22 +233,19 @@ function Sidebar() {
           />
 
           <div>
-            <h1 className="dropdownLinks-TITLE"
+            <h1
+              className="dropdownLinks-TITLE"
               style={{
                 // display: isOpen ? "block" : "none",
                 visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
-                transition: ".5s ease-in",
-                marginLeft: "32px",
-                marginTop: "10px",
-                fontFamily: "Axiforma ",
-                fontWeight: "600",
-                cursor: "pointer",
-                position: "relative"
               }}
               onClick={handleAccountDropdownToggle}
             >
               Account
-              <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: "2px", right: 0}} />
+              <IoIosArrowDown
+                className=" position-absolute"
+                style={{ width: "18px", height: "18px", top: "2px", right: 0 }}
+              />
             </h1>
             <div
               className="collapse-content"
@@ -282,11 +257,7 @@ function Sidebar() {
             >
               <div className="dashboard-Main-link">
                 <ul
-                  className="p-0 mb-0"
-                  style={{
-                    overflow: "hidden",
-                    transition: ".5s ease-in",
-                  }}
+                  className="dashboard-second-link-ul p-0 mb-0"
                   ref={menuRefAccount}
                 >
                   {accountLinks.map((props) => (
@@ -307,6 +278,7 @@ function Sidebar() {
                               : "#050504",
                           fontWeight:
                             selectedTab === props.linkName ? 600 : 400,
+                          fontFamily: "'poppins' ,sans-serif",
                         }}
                       >
                         {props.linkName}
@@ -326,21 +298,19 @@ function Sidebar() {
           />
 
           <div>
-            <h1 className="dropdownLinks-TITLE"
+            <h1
+              className="dropdownLinks-TITLE"
               style={{
                 // display: isOpen ? "block" : "none",
                 visibility: isOpen ? "visible " : "hidden", // for smoth behav if we use display block and none then smothnes not working
-                transition: ".5s ease-in",
-                marginLeft: "32px",
-                marginTop: "10px",
-                fontFamily: "Axiforma ",
-                fontWeight: "600",
-                position: "relative"
               }}
               onClick={handleUpcomingDropdownToggle}
             >
               Upcoming
-              <IoIosArrowDown className=" position-absolute" style={{width: "18px", height: "18px", top: "2px", right: 0}} />
+              <IoIosArrowDown
+                className=" position-absolute"
+                style={{ width: "18px", height: "18px", top: "2px", right: 0 }}
+              />
             </h1>
             <div
               className="collapse-content"
@@ -352,11 +322,7 @@ function Sidebar() {
             >
               <div className="dashboard-Main-link">
                 <ul
-                  className="p-0 mb-0"
-                  style={{
-                    overflow: "hidden",
-                    transition: ".5s ease-in",
-                  }}
+                  className="dashboard-second-link-ul p-0 mb-0"
                   ref={menuRefUpcoming}
                 >
                   {upcomingLinks.map((props) => (
@@ -385,15 +351,15 @@ function Sidebar() {
                   ))}
                 </ul>
               </div>
-              <hr
-            style={{
-              margin: "6px 17px 0",
-              width: isOpen ? "90%" : "65%",
-              transition: ".5s ease-in",
-            }}
-          />
             </div>
           </div>
+          <hr
+                style={{
+                  margin: "6px 17px 0",
+                  width: isOpen ? "90%" : "65%",
+                  transition: ".5s ease-in",
+                }}
+              />
         </div>
       </div>
     </>

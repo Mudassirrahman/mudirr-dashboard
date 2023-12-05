@@ -100,7 +100,7 @@ function ManageProject() {
             <div>
               <h1
                 style={{
-                  fontFamily: "Axiforma",
+                  fontFamily: "'poppins' ,sans-serif",
                   fontStyle: "normal",
                   fontWeight: "700",
                   fontSize: "28px",
@@ -155,7 +155,7 @@ function ManageProject() {
                 style={{
                   width: "228px",
                   height: "24px",
-                  fontFamily: "Axiforma",
+                  fontFamily: "'poppins' ,sans-serif",
                   fontStyle: " normal",
                   fontWeight: "700",
                   fontSize: "18px",
@@ -176,7 +176,7 @@ function ManageProject() {
                     style={{
                       width: " 96px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -190,7 +190,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -207,7 +207,7 @@ function ManageProject() {
                     style={{
                       width: " 131px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -221,7 +221,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -238,7 +238,7 @@ function ManageProject() {
                     style={{
                       width: " 96px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -252,7 +252,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -269,7 +269,7 @@ function ManageProject() {
                     style={{
                       width: " 100px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -283,7 +283,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -300,7 +300,7 @@ function ManageProject() {
                     style={{
                       width: " 120px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -314,7 +314,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -331,7 +331,7 @@ function ManageProject() {
                     style={{
                       width: " 120px",
                       height: " 20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: " normal",
                       fontWeight: "400",
                       fontSize: "14px",
@@ -345,7 +345,7 @@ function ManageProject() {
                     style={{
                       width: "121px",
                       height: "20px",
-                      fontFamily: "Axiforma",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "600",
                       fontSize: "14px",
@@ -373,7 +373,7 @@ function ManageProject() {
                 style={{
                   width: "228px",
                   height: "24px",
-                  fontFamily: "Axiforma",
+                  fontFamily: "'poppins' ,sans-serif",
                   fontStyle: " normal",
                   fontWeight: "700",
                   fontSize: "18px",
@@ -403,7 +403,7 @@ function ManageProject() {
               style={{
                 width: "228px",
                 height: "24px",
-                fontFamily: "Axiforma",
+                fontFamily: "'poppins' ,sans-serif",
                 fontStyle: " normal",
                 fontWeight: "700",
                 fontSize: "18px",
@@ -442,7 +442,7 @@ function ManageProject() {
                     style={{
                       width: "44px",
                       height: "21px",
-                      fontFamily: "Poppins",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: " 14px",
@@ -465,7 +465,7 @@ function ManageProject() {
                     style={{
                       width: "83px",
                       height: "21px",
-                      fontFamily: "Poppins",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: " 14px",
@@ -489,7 +489,7 @@ function ManageProject() {
                     style={{
                       width: "82px",
                       height: "21px",
-                      fontFamily: "Poppins",
+                      fontFamily: "'poppins' ,sans-serif",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: " 14px",

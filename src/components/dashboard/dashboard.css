@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.cdnfonts.com/css/axiforma');
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --main-font: 'Poppins', sans-serif;
+}
+
+
 .dashboardWelcomeHeading{
   width: 632px;
   height: 38px;
   margin-top: 56px;
   margin-left: 25px;
-  font-family: Axiforma ;
-  font-weight: 700;
+ font-family: var(--main-font) !important;
+  font-weight: 600;
   font-size: 28px;
   line-height: 135%;
   color: #050504;
@@ -16,7 +22,7 @@
   width: 632px;
   margin-left: 25px;
   margin-top: 8px;
-  font-family: Axiforma;
+  font-family: var(--main-font) !important;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -28,7 +34,7 @@
   font-size:  16px;
   color:   #050504;
   line-height:  130%;
-  font-family:  Axiforma ;
+  font-family: var(--main-font) !important;
   font-style:  normal;
   font-weight:  600;
 }
@@ -37,7 +43,7 @@
   font-size: 12px;
   color: #707066;
   line-height: 130%;
-  font-family: Axiforma ;
+ font-family: var(--main-font) !important;
   font-style: normal;
   font-weight: 400;
 }
@@ -46,9 +52,9 @@
     /* width: 316px; */
     height: 44px !important;
     /* Body 16 - Semi */
-    /* font-family: "Axiforma " !important; */
     font-style: normal;
-    font-weight: 600 !important;
+    font-family: var(--main-font) !important;
+    font-weight: 500 !important;
     font-size: 16px !important;
     line-height: 140% !important;
     /* or 22px */
@@ -79,7 +85,7 @@
   
   .timelineLink {
     width: 93px;
-    font-family: "Axiforma " !important;
+    font-family: var(--main-font) !important;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -102,8 +108,7 @@
   
   .timelineLink2 {
     float: right;
-    width: 122px;
-    font-family: "Axiforma ";
+    width: 140px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -138,7 +143,7 @@
   span {
     width: 228px;
     height: 20px;
-    font-family: "Axiforma  !important";
+    font-family: var(--main-font) !important;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

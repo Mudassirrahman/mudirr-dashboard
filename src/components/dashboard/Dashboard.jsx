@@ -98,7 +98,7 @@ function Dashboard() {
                 <h3 className="projectCounter">
                   {projectsCount[props.projectRemark]}
                 </h3>
-                <h4 className="projectRemark">{props.projectRemark}</h4>
+                <h4 style={{fontFamily: "'poppins' ,sans-serif"}} className="projectRemark">{props.projectRemark}</h4>
               </div>
             </div>
           ))}

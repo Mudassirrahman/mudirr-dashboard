@@ -43,7 +43,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     style={{
                       width: isOpen ? "236px" : "316px",
                       transition: ".5s ease-in",
-                      fontFamily: "Axiforma ",
+                      fontFamily: "'Poppins', sans-serif ",
                     }}
                   >
                     {item.heading}
@@ -57,7 +57,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     <h4
                       className="m-0"
                       style={{
-                        fontFamily: "Axiforma ",
+                        fontFamily: "'Poppins', sans-serif ",
                         fontStyle: "normal",
                         fontWeight: "400",
                         fontSize: "12px",
@@ -81,9 +81,11 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     style={{
                       backgroundColor: "#ECEDF3",
                       borderRadius: "4px",
-                      width: "76px",
+                      minWidth: "72px",
+                      maxWidth: "90px",
+                      width: "  auto",
                       // height: "16px",
-                      fontFamily: "Axiforma ",
+                      fontFamily: "'Poppins', sans-serif ",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "12px",
@@ -100,7 +102,7 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                       marginTop: "7px",
                       maxWidth: "170px",
                       borderRadius: "4px",
-                      fontFamily: "Axiforma ",
+                      fontFamily: "'Poppins', sans-serif ",
                       fontStyle: "normal",
                       fontWeight: "400",
                       fontSize: "12px",
@@ -121,11 +123,11 @@ function ProjectTimeLineCard({  status, projectsCount }) {
                     <h3
                       style={{
                         fontSize: "14px",
-                        fontWeight: "600",
+                        fontWeight: "500",
                         lineHeight: "140%",
                         color: " #050504",
                         marginTop: "18px",
-                        fontFamily: "Axiforma ",
+                        fontFamily: "'Poppins', sans-serif ",
                       }}
                     >
                       {item.task}

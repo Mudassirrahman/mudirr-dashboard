@@ -36,7 +36,7 @@ export default function TimeLine() {
           <h6
             style={{
               fontSize: "12px",
-              fontFamily: "Axiforma , sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontStyle: "normal",
               fontWeight: "400",
               lineHeight: "130%",

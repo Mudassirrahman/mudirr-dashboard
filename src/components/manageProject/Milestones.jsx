@@ -19,7 +19,7 @@ function Milestones() {
               scope="col"
               style={{
                 padding: " 24px 0px 8px 24px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "600",
                 fontSize: "14px",
@@ -35,7 +35,7 @@ function Milestones() {
               scope="col"
               style={{
                 padding: " 24px 0px 8px 24px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "600",
                 fontSize: "14px",
@@ -51,7 +51,7 @@ function Milestones() {
               scope="col"
               style={{
                 padding: " 24px 0px 8px 12px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "600",
                 fontSize: "14px",
@@ -72,7 +72,7 @@ function Milestones() {
                 textAlign: "left",
                 paddingLeft: "24px",
                 width: "110px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "14px",
@@ -142,7 +142,7 @@ function Milestones() {
               style={{
                 textAlign: "left",
                 paddingLeft: "24px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "14px",
@@ -207,7 +207,7 @@ function Milestones() {
               style={{
                 textAlign: "left",
                 paddingLeft: "24px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "14px",
@@ -271,7 +271,7 @@ function Milestones() {
               style={{
                 textAlign: "left",
                 paddingLeft: "24px",
-                fontFamily: "Axiforma , sans-serif",
+                fontFamily: "  'poppins' ,sans-serif",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "14px",

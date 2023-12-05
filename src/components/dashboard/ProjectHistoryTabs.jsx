@@ -9,11 +9,11 @@ function ProjectHistoryTabs ({projectsCount}) {
   return (
     <Tabs>
       <TabList style={{ marginTop: "67px", marginLeft: "25px" , display:"flex" ,  }}>
-        <Tab className="timelineLink list-unstyled "
+        <Tab className="timelineLink list-unstyled " style={{fontFamily: "'Poppins', sans-serif"}}
         >Ongoing</Tab>
-        <Tab className="timelineLink list-unstyled">Completed</Tab>
-        <Tab className="timelineLink list-unstyled">Cancelled</Tab>
-        <Tab className="timelineLink list-unstyled">Drafts</Tab>
+        <Tab className="timelineLink list-unstyled" style={{fontFamily: "'Poppins', sans-serif"}}>Completed</Tab>
+        <Tab className="timelineLink list-unstyled" style={{fontFamily: "'Poppins', sans-serif"}}>Cancelled</Tab>
+        <Tab className="timelineLink list-unstyled" style={{fontFamily: "'Poppins', sans-serif"}}>Drafts</Tab>
       
         <Tab className=" list-unstyled timelineLink2"
           style={{

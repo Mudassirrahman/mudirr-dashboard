@@ -19,7 +19,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -50,7 +50,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -81,7 +81,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -112,7 +112,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -154,7 +154,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -185,7 +185,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -216,7 +216,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -247,7 +247,7 @@ function Detail() {
                   htmlFor=""
                   style={{
                     height: "20px",
-                    fontFamily: "Axiforma , sans-serif",
+                    fontFamily: "  'poppins' ,sans-serif",
                     fontStyle: "normal",
                     fontWeight: "600",
                     fontSize: "14px",
@@ -279,7 +279,7 @@ function Detail() {
                 htmlFor=""
                 style={{
                   height: "20px",
-                  fontFamily: "Axiforma , sans-serif",
+                  fontFamily: "  'poppins' ,sans-serif",
                   fontStyle: "normal",
                   fontWeight: "600",
                   fontSize: "14px",
