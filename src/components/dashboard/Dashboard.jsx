@@ -75,14 +75,8 @@ function Dashboard() {
         {/* folder tracking */}
 
         <div
-          className="d-flex "
-          style={{
-            marginLeft: "25px",
-            gap: isOpen ? "52px" : "92px",
-            transition: ".5s ease-in",
-            marginTop: "32px",
-            maxWidth: "935px"
-          }}
+          className="projectsTrackeingDisplayDataDiv"
+          style={{ gap: isOpen ? "52px" : "92px" }}
         >
           {projectsTrackeingDisplayData.map((props) => (
             <div className="d-flex gap-2" key={props.id}>
@@ -98,13 +92,12 @@ function Dashboard() {
                 <h3 className="projectCounter">
                   {projectsCount[props.projectRemark]}
                 </h3>
-                <h4 style={{fontFamily: "'poppins' ,sans-serif"}} className="projectRemark">{props.projectRemark}</h4>
+                <h4 className="projectRemark">{props.projectRemark}</h4>
               </div>
             </div>
           ))}
         </div>
         <div
-          className=""
           style={{
             width: isOpen ? "964px" : "1204px",
             transition: ".5s ease-in",

@@ -5,7 +5,11 @@
   --main-font: 'Poppins', sans-serif;
 }
 
-
+.main{
+  transition: .5s ease-in !important;
+  position: absolute;
+  top: 0;
+}
 .dashboardWelcomeHeading{
   width: 632px;
   height: 38px;
@@ -30,6 +34,13 @@
   color: #707066;
 }
 
+.projectsTrackeingDisplayDataDiv{
+  display: flex;
+  margin-left: 25px;
+  transition: .5s ease-in;
+  margin-top: 32px;
+  max-width: 935px;
+}
 .projectCounter{
   font-size:  16px;
   color:   #050504;
@@ -43,7 +54,7 @@
   font-size: 12px;
   color: #707066;
   line-height: 130%;
- font-family: var(--main-font) !important;
+  font-family: var(--main-font) !important;
   font-style: normal;
   font-weight: 400;
 }
