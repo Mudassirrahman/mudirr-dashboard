@@ -22,7 +22,7 @@ function CountDownTimer() {
 
   return (
     <div className="container card p-3">
-    <div style={{  borderBottom: "1px solid  #DADAD7",}}>
+    <div style={{  borderBottom: "1px solid  #DADAD7", margin: "0 auto"}}>
       <h1
         className="text-center"
         style={{
@@ -30,21 +30,20 @@ function CountDownTimer() {
           height: "24px",
           fontFamily: "'poppins' ,sans-serif",
           fontStyle: "normal",
-          fontWeight: "700",
+          fontWeight: "600",
           fontSize: "18px",
           lineHeight: "135%",
           color: " #050504",
-        
         }}
       >
         Time Left to Deliver
       </h1>
       </div>
-      <div className="col-3 d-flex" style={{marginLeft:"67px"}}>
+      <div className="col-3 d-flex mt-2" style={{marginLeft:"67px"}}>
         <div className="" style={{ width: "82px" }}>
           <p
             style={{
-              width: "30px",
+              // width: "35px",
               height: "34px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -60,7 +59,7 @@ function CountDownTimer() {
           <p
             style={{
               marginLeft: "0%",
-              width: "45px",
+              width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -77,7 +76,7 @@ function CountDownTimer() {
         <div className="" style={{ width: "82px" }}>
           <p
             style={{
-              width: "30px",
+              // width: "35px",
               height: "34px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -88,13 +87,13 @@ function CountDownTimer() {
               color: "#050504",
             }}
           >
-            {" "}
-            {hours}{" "}
+            
+            {hours}
           </p>
           <p
             style={{
               marginLeft: "0%",
-              width: "45px",
+              width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -111,7 +110,7 @@ function CountDownTimer() {
         <div className="" style={{ width: "82px" }}>
           <p
             style={{
-              width: "30px",
+              // width: "35px",
               height: "34px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -122,13 +121,13 @@ function CountDownTimer() {
               color: "#050504",
             }}
           >
-            {" "}
-            {minutes}{" "}
+            
+            {minutes}
           </p>
           <p
             style={{
               marginLeft: "0%",
-              width: "45px",
+              width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -145,7 +144,7 @@ function CountDownTimer() {
         <div className="" style={{ width: "82px" }}>
           <p
             style={{
-              width: "30px",
+              // width: "35px",
               height: "34px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
@@ -156,12 +155,12 @@ function CountDownTimer() {
               color: "#050504",
             }}
           >
-            {seconds}{" "}
+            {seconds}
           </p>
           <p
             style={{
               marginLeft: "0%",
-              width: "45px",
+              width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
               fontStyle: "normal",
