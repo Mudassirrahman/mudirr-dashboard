@@ -39,8 +39,8 @@ function CountDownTimer() {
         Time Left to Deliver
       </h1>
       </div>
-      <div className="col-3 d-flex mt-2" style={{marginLeft:"67px"}}>
-        <div className="" style={{ width: "82px" }}>
+      <div className="d-flex justify-content-center mt-2">
+        <div className="" style={{ width: "65px", textAlign: "center" }}>
           <p
             style={{
               // width: "35px",
@@ -58,7 +58,7 @@ function CountDownTimer() {
           </p>
           <p
             style={{
-              marginLeft: "0%",
+              margin: "0 auto",
               width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
@@ -73,7 +73,7 @@ function CountDownTimer() {
           </p>
         </div>
         {showSemicolon ? <div className="semicolon">:</div> : null}
-        <div className="" style={{ width: "82px" }}>
+        <div className="" style={{ width: "65px", textAlign: "center" }}>
           <p
             style={{
               // width: "35px",
@@ -92,7 +92,7 @@ function CountDownTimer() {
           </p>
           <p
             style={{
-              marginLeft: "0%",
+              margin: "0 auto",
               width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
@@ -107,7 +107,7 @@ function CountDownTimer() {
           </p>
         </div>
         {showSemicolon ? <div className="semicolon">:</div> : null}
-        <div className="" style={{ width: "82px" }}>
+        <div className="" style={{ width: "65px", textAlign: "center" }}>
           <p
             style={{
               // width: "35px",
@@ -126,7 +126,7 @@ function CountDownTimer() {
           </p>
           <p
             style={{
-              marginLeft: "0%",
+              margin: "0 auto",
               width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
@@ -141,7 +141,7 @@ function CountDownTimer() {
           </p>
         </div>
         {showSemicolon ? <div className="semicolon">:</div> : null}
-        <div className="" style={{ width: "82px" }}>
+        <div className="" style={{ width: "65px", textAlign: "center" }}>
           <p
             style={{
               // width: "35px",
@@ -159,7 +159,7 @@ function CountDownTimer() {
           </p>
           <p
             style={{
-              marginLeft: "0%",
+              margin: "0 auto",
               width: "50px",
               height: "16px",
               fontFamily: "'poppins' ,sans-serif",
