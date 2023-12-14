@@ -121,8 +121,8 @@ function ManageProject() {
           className="col-3 position-absolute end-0 top-0 "
           style={{ marginTop: "56px" }}
         >
-          {/* <CountDownTimer /> */}
-          {/* <div className="card" style={{ marginTop: "24px" }}>
+          <CountDownTimer />
+          <div className="card" style={{ marginTop: "24px" }}>
             <div className="card-body">
               <div
                 className="d-flex justify-content-between"
@@ -136,7 +136,7 @@ function ManageProject() {
                 Follow up..
               </p>
             </div>
-          </div> */}
+          </div>
           {/* <div
             className="card"
             style={{
