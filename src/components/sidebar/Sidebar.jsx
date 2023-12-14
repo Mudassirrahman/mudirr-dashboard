@@ -103,7 +103,13 @@ function Sidebar() {
               onClick={toggle}
             />
           </div>
-          <div className="dropdown">
+          <div
+            className="dropdown"
+            style={{
+              marginTop: "12px",
+              marginLeft: "24px",
+            }}
+          >
             <a
               href="/"
               className="d-flex  link-dark text-decoration-none "
@@ -354,12 +360,12 @@ function Sidebar() {
             </div>
           </div>
           <hr
-                style={{
-                  margin: "6px 17px 0",
-                  width: isOpen ? "90%" : "65%",
-                  transition: ".5s ease-in",
-                }}
-              />
+            style={{
+              margin: "6px 17px 0",
+              width: isOpen ? "90%" : "65%",
+              transition: ".5s ease-in",
+            }}
+          />
         </div>
       </div>
     </>

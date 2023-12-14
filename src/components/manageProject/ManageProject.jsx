@@ -80,7 +80,7 @@ function ManageProject() {
             left: isOpen ? "340px" : "98px",
             marginLeft: "20px",
             width: isOpen ? "632px" : "876px",
-            transition:  ".5s ease-in",
+            transition: ".5s ease-in",
           }}
         >
           <div className="d-flex" style={{ gap: "29px" }}>
@@ -102,7 +102,7 @@ function ManageProject() {
                 style={{
                   fontFamily: "'poppins' ,sans-serif",
                   fontStyle: "normal",
-                  fontWeight: "700",
+                  fontWeight: "500",
                   fontSize: "28px",
                   lineHeight: "135%",
                   color: "#050504",
@@ -121,8 +121,8 @@ function ManageProject() {
           className="col-3 position-absolute end-0 top-0 "
           style={{ marginTop: "56px" }}
         >
-          <CountDownTimer />
-          <div className="card" style={{ marginTop: "24px" }}>
+          {/* <CountDownTimer /> */}
+          {/* <div className="card" style={{ marginTop: "24px" }}>
             <div className="card-body">
               <div
                 className="d-flex justify-content-between"
@@ -136,7 +136,7 @@ function ManageProject() {
                 Follow up..
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div
             className="card"
             style={{

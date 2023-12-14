@@ -13,7 +13,13 @@ function Milestones() {
     >
       <table className="bg-white w-100">
         <thead className="bg-white">
-          <tr className="bg-white">
+          <tr
+            className="bg-white"
+            style={{
+              border: "1px solid #ddd",
+              height: "60px",
+            }}
+          >
             <th
               className="text-start bg-white"
               scope="col"
@@ -41,7 +47,7 @@ function Milestones() {
                 fontSize: "14px",
                 lineHeight: "140%",
                 color: "#707066",
-                width: "300px",
+                width: "auto",
               }}
             >
               Milestone Name
@@ -65,7 +71,13 @@ function Milestones() {
           </tr>
         </thead>
         <tbody className="bg-white">
-          <tr className="bg-white">
+          <tr
+            className="bg-white"
+            style={{
+              border: "1px solid #ddd",
+              height: "60px",
+            }}
+          >
             <td
               data-label="Due Date"
               style={{
@@ -90,7 +102,7 @@ function Milestones() {
                 className="btn "
                 style={{
                   color: "#479B74",
-                  marginRight: "24px",
+                  // marginRight: "24px",
                   padding: "4px 8px",
                   gap: "8px",
                   isolation: " isolate",
@@ -103,9 +115,12 @@ function Milestones() {
                 Completed
               </button>
             </td>
-            <div className="dropdown">
+            <div
+              className="dropdown "
+              style={{ marginTop: "10px", }}
+            >
               <BsThreeDotsVertical
-                className="mt-4 ms-4   dropdown-toggle"
+                className="mt-3 ms-3 me-2   dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -136,7 +151,13 @@ function Milestones() {
               </ul>
             </div>
           </tr>
-          <tr className="bg-white">
+          <tr
+            className="bg-white"
+            style={{
+              border: "1px solid #ddd",
+              height: "60px",
+            }}
+          >
             <td
               data-label="Due Date"
               style={{
@@ -161,7 +182,7 @@ function Milestones() {
                 className="btn"
                 style={{
                   color: "#55619C",
-                  marginRight: "24px",
+                  // marginRight: "24px",
                   padding: "4px 8px",
                   gap: "8px",
                   isolation: " isolate",
@@ -174,9 +195,9 @@ function Milestones() {
                 Ongoing
               </button>
             </td>
-            <div className="dropdown">
+            <div className="dropdown" style={{ marginTop: "10px" }}>
               <BsThreeDotsVertical
-                className="mt-4 ms-4   dropdown-toggle"
+                className="mt-3 ms-3 me-2   dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -201,7 +222,13 @@ function Milestones() {
               </ul>
             </div>
           </tr>
-          <tr className="bg-white">
+          <tr
+            className="bg-white"
+            style={{
+              border: "1px solid #ddd",
+              height: "60px",
+            }}
+          >
             <td
               data-label="Due Date"
               style={{
@@ -225,7 +252,7 @@ function Milestones() {
                 className="btn"
                 style={{
                   color: "#55619C",
-                  marginRight: "24px",
+                  // marginRight: "24px",
                   padding: "4px 8px",
                   gap: "8px",
                   isolation: " isolate",
@@ -238,9 +265,9 @@ function Milestones() {
                 Pending
               </button>
             </td>
-            <div className="dropdown">
+            <div className="dropdown" style={{ marginTop: "10px" }}>
               <BsThreeDotsVertical
-                className="mt-4 ms-4   dropdown-toggle"
+                className="mt-3 ms-3 me-2   dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -265,7 +292,13 @@ function Milestones() {
               </ul>
             </div>
           </tr>
-          <tr className="bg-white">
+          <tr
+            className="bg-white"
+            style={{
+              border: "1px solid #ddd",
+              height: "60px",
+            }}
+          >
             <td
               data-label="Due Date"
               style={{
@@ -289,7 +322,7 @@ function Milestones() {
                 className="btn"
                 style={{
                   color: "#55619C",
-                  marginRight: "24px",
+                  // marginRight: "24px",
                   padding: "4px 8px",
                   gap: "8px",
                   isolation: " isolate",
@@ -302,9 +335,9 @@ function Milestones() {
                 Ongoing
               </button>
             </td>
-            <div className="dropdown">
+            <div className="dropdown" style={{ marginTop: "10px" }}>
               <BsThreeDotsVertical
-                className="mt-4 ms-4   dropdown-toggle"
+                className="mt-3 ms-3 me-2   dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
