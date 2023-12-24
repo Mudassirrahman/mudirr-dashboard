@@ -88,10 +88,10 @@
 
 .main {
     width: -webkit-fill-available;
-    -moz-transition: left .8s ease-in;
-    -o-transition: left .8s ease-in;
-    -webkit-transition: left .8s ease-in;
-    transition: left .8s ease-in;
+    -moz-transition: left .5s ease-in;
+    -o-transition: left .5s ease-in;
+    -webkit-transition: left .5s ease-in;
+    transition: left .5s ease-in;
   }
   
   .timelineLink {
